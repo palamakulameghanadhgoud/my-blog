@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input value="Click me" onclick="countRabbit()" type="button">
+    <p id="counter"></p>
+    <script>
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function countRabbit() {
+            for(let i=1;  i<=100; i++){
+                document.getElementById('counter').innerHTML = "counter " + i;
+                await delay(1000);
+            }
+        }
+    </script>
+</body>
+</html>
